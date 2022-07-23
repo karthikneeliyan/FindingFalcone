@@ -4,6 +4,10 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Setting up local:
 git clone `https://github.com/karthikneeliyan/FindingFalcone.git`
+<br />
+checkout master branch. 
+<br/>
+move to FindingFalcone by `cd FindingFalcone`
 <br /> 
 Run npm install
 <br /> 
