@@ -1,0 +1,107 @@
+<h3 class="nav justify-content-center">Select Planets to search</h3>
+<div class="container px-4">
+  <form [formGroup]="profileForm" class="row gx-5" (ngSubmit)="onSubmit()">
+    <div class="col-md-3">
+      <div class="p-3 border bg-light">
+        <div class="form-group">
+          <label>Destination 1</label>
+          <select #p1 class="form-control" (change)="onvehiclechange()" formControlName="planet1">
+
+            <option *ngFor="let planet of planets | planetSelectorCallback:selectedPlanets:profileForm.value.planet1" [ngValue]="planet.name">
+              {{ planet.name }}
+            </option>
+          </select>
+        </div>
+        <div>
+          <p *ngIf="profileForm.value.planet1">Distance :  {{planetDistanceMap[profileForm.value.planet1]}}</p>
+        </div>
+        <div *ngFor="let vehicle of vehicles">
+          <label *ngIf="profileForm.value.planet1"  class="vehclelabel" for="vehicle1">
+            <input name="vehicle1" (change)="onvehiclechange()" formControlName="vehicle1" [value]="vehicle.name"
+              type="radio" [attr.disabled]="isDisabled(vehicle.name,'planet1')">
+            {{vehicle.name}} ({{VehicleMap[vehicle.name]}})
+          </label>
+        </div>
+
+      </div>
+    </div>
+    <div  class="col-md-3">
+      <div class="p-3 border bg-light">
+        <div class="form-group">
+          <label>Destination 2</label>
+          <select class="form-control" (change)="onvehiclechange()" formControlName="planet2">
+
+            <option *ngFor="let planet of planets| planetSelectorCallback:selectedPlanets:profileForm.value.planet2"
+              [ngValue]="planet.name" >
+              {{ planet.name }}
+            </option>
+          </select>
+        </div>
+        <div>
+          <p *ngIf="profileForm.value.planet2">Distance :  {{planetDistanceMap[profileForm.value.planet2]}}</p>
+        </div>
+        <div *ngFor="let vehicle of vehicles">
+          <label *ngIf="profileForm.value.planet2"  class="vehclelabel" for="vehicle2">
+            <input name="vehicle2" (change)="onvehiclechange()" formControlName="vehicle2" [value]="vehicle.name"
+              type="radio" [attr.disabled]="isDisabled(vehicle.name,'planet2')">
+            {{vehicle.name}} ({{VehicleMap[vehicle.name]}})
+          </label>
+        </div>
+
+      </div>
+    </div>
+    <div  class="col-md-3">
+      <div class="p-3 border bg-light">
+        <div class="form-group">
+          <label>Destination 3</label>
+          <select class="form-control" (change)="onvehiclechange()" formControlName="planet3">
+
+            <option *ngFor="let planet of planets| planetSelectorCallback:selectedPlanets:profileForm.value.planet3"
+              [ngValue]="planet.name">
+              {{ planet.name }}
+            </option>
+          </select>
+        </div>
+        <div>
+          <p *ngIf="profileForm.value.planet3">Distance :  {{planetDistanceMap[profileForm.value.planet3]}}</p>
+        </div>
+        <div *ngFor="let vehicle of vehicles">
+          <label *ngIf="profileForm.value.planet3"  class="vehclelabel" for="vehicle3">
+            <input name="vehicle3" (change)="onvehiclechange()" formControlName="vehicle3" [value]="vehicle.name"
+              type="radio" [attr.disabled]="isDisabled(vehicle.name,'planet3')">
+            {{vehicle.name}} ({{VehicleMap[vehicle.name]}})
+          </label>
+        </div>
+
+      </div>
+    </div>
+    <div  class="col-md-3">
+      <div class="p-3 border bg-light">
+        <div class="form-group">
+          <label>Destination 4</label>
+          <select class="form-control" (change)="onvehiclechange()" formControlName="planet4">
+
+            <option *ngFor="let planet of planets| planetSelectorCallback:selectedPlanets:profileForm.value.planet4"
+              [ngValue]="planet.name">
+              {{ planet.name }}
+            </option>
+          </select>
+        </div>
+        <div>
+          <p *ngIf="profileForm.value.planet4">Distance :  {{planetDistanceMap[profileForm.value.planet4]}}</p>
+        </div>
+        <div *ngFor="let vehicle of vehicles">
+          <label *ngIf="profileForm.value.planet4" class="vehclelabel" for="vehicle4">
+            <input name="vehicle4" (change)="onvehiclechange()" formControlName="vehicle4" [value]="vehicle.name"
+              type="radio" [attr.disabled]="isDisabled(vehicle.name,'planet4')">
+            {{vehicle.name}} ({{VehicleMap[vehicle.name]}})
+          </label>
+        </div>
+
+      </div>
+    </div>
+    <button class="button " [disabled]="!profileForm.valid" type="submit">Find falcone </button>
+  </form>
+</div>
+
+

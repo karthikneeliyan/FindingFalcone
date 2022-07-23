@@ -1,0 +1,19 @@
+.container{
+    margin-top: 1rem;
+    position: relative;
+}
+.submit{
+    left: 40%;
+    position: relative;
+    margin-top: 1rem;
+}
+.button{
+    left: 40%;
+    width: 25%;
+    position: fixed;
+    top: 55%;
+    height: 2rem;
+}
+.result{
+    margin-top: 5rem;
+}

@@ -1,0 +1,9 @@
+.navbar-brand{
+    padding: .5rem;
+}
+.navbar{
+   display: flex;
+}
+span{
+    cursor: pointer;
+}
