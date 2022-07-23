@@ -4,8 +4,11 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Setting up local:
 git clone `https://github.com/karthikneeliyan/FindingFalcone.git`
+<br /> 
 Run npm install
+<br /> 
 Run ng serve
+<br /> 
 Project will be served in `http://localhost:4200/`
 
 ## Development server
