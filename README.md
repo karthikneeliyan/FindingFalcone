@@ -15,6 +15,8 @@ Run ng serve
 <br /> 
 Project will be served in `http://localhost:4200/`
 
+## deployment available in heroku:
+`https://findingfalconee.herokuapp.com/`
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
